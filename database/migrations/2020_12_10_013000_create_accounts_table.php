@@ -84,7 +84,11 @@ class CreateAccountsTable extends Migration
             $table->string('left_thumb_upload')->nullable();
             $table->string('right_thumb_upload')->nullable();
 
+            
             $table->string('status');
+            $table->string('application_id')->nullable();
+            $table->string('joint_application_id')->nullable();
+            
             $table->timestamps();
         });
     }
