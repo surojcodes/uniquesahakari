@@ -61,7 +61,7 @@ class CreateAccountsTable extends Migration
             $table->string('guardian_month')->nullable();
             $table->string('guardian_day')->nullable();
             $table->string('guardian_citizen_passport')->nullable();
-            $table->string('guardian_signature');
+            $table->string('guardian_signature')->nullable();
 
             $table->string('mobile_banking');
             $table->string('sms_banking');
