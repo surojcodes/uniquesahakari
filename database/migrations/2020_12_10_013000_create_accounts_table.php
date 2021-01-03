@@ -18,13 +18,13 @@ class CreateAccountsTable extends Migration
             $table->string('operation');
             $table->string('salutation');
             $table->string('saving_scheme');
-            $table->string('regular_option');
-            $table->string('regular_amount');
-            $table->string('regular_duration');
-            $table->string('general_option');
-            $table->string('fixed_amount');
-            $table->string('fixed_duration');
-            $table->string('fixed_payment');
+            $table->string('regular_option')->nullable();
+            $table->string('regular_amount')->nullable();
+            $table->string('regular_duration')->nullable();
+            $table->string('general_option')->nullable();
+            $table->string('fixed_amount')->nullable();
+            $table->string('fixed_duration')->nullable();
+            $table->string('fixed_payment')->nullable();
 
             $table->string('fullName');
             $table->string('fatherName');
