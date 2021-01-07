@@ -44,7 +44,7 @@ class CreateAccountsTable extends Migration
             $table->string('dob_year');
             $table->string('dob_month');
             $table->string('dob_day');
-            $table->string('citizen_passport');
+            $table->text('citizen_passport');
             $table->string('issued_place');
             $table->string('marital_status');
             $table->string('nationality')->nullable();
@@ -60,7 +60,7 @@ class CreateAccountsTable extends Migration
             $table->string('guardian_year')->nullable();
             $table->string('guardian_month')->nullable();
             $table->string('guardian_day')->nullable();
-            $table->string('guardian_citizen_passport')->nullable();
+            $table->text('guardian_citizen_passport')->nullable();
             $table->string('guardian_signature')->nullable();
 
             $table->string('mobile_banking');
@@ -71,7 +71,7 @@ class CreateAccountsTable extends Migration
 
             $table->string('nominee_name')->nullable();
             $table->string('nominee_relation')->nullable();
-            $table->string('nominee_citizen_passport')->nullable();
+            $table->text('nominee_citizen_passport')->nullable();
 
             $table->string('introducer_name')->nullable();
             $table->string('introducer_phone')->nullable();
@@ -86,8 +86,8 @@ class CreateAccountsTable extends Migration
 
             
             $table->string('status');
-            $table->string('application_id')->nullable();
-            $table->string('joint_application_id')->nullable();
+            $table->text('application_id')->nullable();
+            $table->text('joint_application_id')->nullable();
             
             $table->timestamps();
         });

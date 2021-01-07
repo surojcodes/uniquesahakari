@@ -14,7 +14,7 @@ class AdminSeeder extends Seeder
     {
         User::create([
             'name'=>'Admin',
-            'email'=>'admin@uniuesacos.com',
+            'email'=>'admin@uniquesacos.com',
             'password'=>bcrypt('hrfNypq4La8bQQN'),
         ]);
     }
