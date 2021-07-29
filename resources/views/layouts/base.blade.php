@@ -59,15 +59,15 @@
                     <li><a href="/about">About</a></li>
                     <li class="drop-down"><a href="">Services</a>
                         <ul>
-                            <li><a href="/loan">Loan Services</a></li>
-                            <li><a href="/saving">Saving Scheme</a></li>
+                            <li><a href="/loanScheme">Loan Services</a></li>
+                            <li><a href="/savingScheme">Saving Scheme</a></li>
                         </ul>
                     </li>
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/notices">Notices</a></li>
                     <li><a href="/downloads">Downloads</a></li>
                     <li><a href="/online-account" class='animate__animated animate__pulse animate__infinite' style='color:#c48b31;'>Onine Account</a></li>
-                    <!-- <li><a href="/online-loan" class='animate__animated animate__pulse animate__infinite' style=' color: #c48b31;'>Apply Loan</a></li> -->
+                    {{-- <li><a href="/online-loan" class='animate__animated animate__pulse animate__infinite' style=' color: #c48b31;'>Apply Loan</a></li> --}}
                 </ul>
             </nav>
             </div>
@@ -109,8 +109,8 @@
                         <p>
                             Samakhusi, Kathmandu <br>
                             NP 44600, Nepal<br><br>
-                            <strong>Phone:</strong> 01-4350919<br>
-                            <strong>Email:</strong> uniuesacos@gmail.com<br>
+                            <strong>Phone:</strong> 01-4389441<br>
+                            <strong>Email:</strong> uniquesacos@gmail.com<br>
                         </p>
                         <div class="social-links mt-3">
                             <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>

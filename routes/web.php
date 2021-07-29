@@ -5,6 +5,11 @@ use App\Notice;
 
 //basic pages routes
 Route::get('/', 'NavigationController@index');
+Route::get('/about', 'NavigationController@about');
+Route::get('/contact', 'NavigationController@contact');
+Route::get('/loanScheme', 'NavigationController@loanScheme');
+Route::get('/savingScheme', 'NavigationController@savingScheme');
+
 Route::get('/get-front-notice',function(){
   $notice = Notice::where('set_front',1)->first();
   return Response::json($notice);

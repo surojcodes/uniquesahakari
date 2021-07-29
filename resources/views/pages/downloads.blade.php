@@ -4,7 +4,7 @@ Unique Cooperative | Downloads
 @endsection
 @section('content')
 
-<div class="container services section-bg mt-3 pb-5 mb-5">
+<div class="container services mt-3 pb-5 mb-5">
   <div class="section-title">
     <span>Downloads</span>
     <h2>Downloads</h2>

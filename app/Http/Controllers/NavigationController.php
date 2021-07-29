@@ -42,4 +42,17 @@ class NavigationController extends Controller
     public function abort(){
         abort(404);
     }
+    public function about(){
+        return view('pages.about');
+    }
+    public function contact(){
+        return view('pages.contact');
+    }
+    public function loanScheme(){
+        return view('pages.loanScheme');
+    }
+    public function savingScheme(){
+        return view('pages.savingScheme');
+    }
+
 }
