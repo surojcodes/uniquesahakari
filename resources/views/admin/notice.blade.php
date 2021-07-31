@@ -32,13 +32,13 @@
             <td>{{$notice->title}}</td>
             <td>
             @if($notice->set_front==0)
-              <form action="/set-front/{{$notice->slug}}" method="POST">
+              <form action="/admin/set-front/{{$notice->slug}}" method="POST">
                 @csrf
                 @method('PUT')
                 <input type="submit" class="btn btn-sm btn-success text-white" value='Set Front'></input>
               </form>
             @else
-            <form action="/remove-front/{{$notice->slug}}" method="POST">
+            <form action="/admin/remove-front/{{$notice->slug}}" method="POST">
                 @csrf
                 @method('PUT')
                 <input type="submit" class="btn btn-sm btn-info text-white" value='Remove Front'></input>
@@ -127,7 +127,7 @@
 @section('scripts')
 <script>
   function setId(id){
-      $('#deleteNoticeForm').attr('action','/notice/'+id);
+      $('#deleteNoticeForm').attr('action','/admin/notice/'+id);
   }
   $(document).ready( function () {
     $('#noticeTable').DataTable({

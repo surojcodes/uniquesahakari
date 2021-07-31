@@ -55,16 +55,34 @@
                     <li><a href="{{route('sliders.index')}}">Slider Images</a></li>
                     <li><a href="{{route('notices.index')}}">Notices</a></li>
                     <li><a href="{{route('downloads.index')}}">Downloads</a></li>
+                    <li class="drop-down"><a href="">Services</a>
+                        <ul>
+                            <li><a href="/admin/loanScheme">Loan Services</a></li>
+                            <li><a href="/admin/savingScheme">Saving Scheme</a></li>
+                            <li><a href="/admin/mobileBanking">Mobile Banking</a></li>
+                            <li><a href="/admin/smsBanking">SMS Banking</a></li>
+                            <li><a href="/admin/remittance">Remittance</a></li>
+                            <li><a href="/admin/other">Other</a></li>
+                        </ul>
+                    </li>
+                     <li class="drop-down"><a href="#">About</a>
+                        <ul>
+                            <li><a href="/admin/introduction">Introduction</a></li>
+                            <li><a href="/admin/mvo">Mission,Vision and Objective</a></li>
+                            <li><a href="/admin/membership">Membership</a></li>
+                            <li><a href="/admin/principle">Principle of cooperative</a></li>
+                            <li><a href="/admin/bod">Board of Directors</a></li>
+                        </ul>
+                    </li>
                     <li>
-                    
-                      <a class="text-danger" href="{{ route('logout') }}"
+                        <a class="text-danger" href="{{ route('logout') }}"
                               onclick="event.preventDefault();
                                               document.getElementById('logout-form').submit();">
                               <i class="icofont-logout"></i> Logout
-                          </a>
-                          <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
-                              @csrf
-                          </form>
+                        </a>
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                @csrf
+                        </form>
                     </li>
                 </ul>
             @endauth

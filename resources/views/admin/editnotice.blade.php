@@ -41,7 +41,7 @@
             <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
             <button type="submit" class="btn btn-primary">Update</button>
           </div>
-        </form>
+      </form>
     </div>
   </div>
 </div>

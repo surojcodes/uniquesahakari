@@ -4,6 +4,7 @@ Unique Cooperative | Home
 @endsection
 @section('content')
 <!-- ======= Hero Section ======= -->
+@if(count($sliders)>0)
 <section id="hero" class='mb-5'>
     <div class="hero-container">
       <div id="heroCarousel" class="carousel slide carousel-fade" data-ride="carousel">
@@ -37,7 +38,7 @@ Unique Cooperative | Home
       </div>
     </div>
 </section><!-- End Hero -->
-
+@endif
 <!-- Nepali Calender -->
 <div class="container">
   <div class="row mb-5">

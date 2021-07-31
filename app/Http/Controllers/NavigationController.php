@@ -9,6 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Slider;
 use App\Notice;
 use App\Download;
+use App\Introduction;
 
 class NavigationController extends Controller
 {
@@ -42,17 +43,49 @@ class NavigationController extends Controller
     public function abort(){
         abort(404);
     }
-    public function about(){
-        return view('pages.about');
-    }
     public function contact(){
         return view('pages.contact');
     }
-    public function loanScheme(){
-        return view('pages.loanScheme');
+    public function gallery(){
+        return view('pages.gallery');
     }
-    public function savingScheme(){
-        return view('pages.savingScheme');
+    
+    // About
+    public function bod(){
+        return view('pages.about.bod');
+    }
+    public function introduction(){
+        $introduction = Introduction::first();
+        return view('pages.about.introduction',compact('introduction'));
+    }
+     public function membership(){
+        return view('pages.about.membership');
+    }
+     public function mvo(){
+        return view('pages.about.mvo');
+    }
+     public function principle(){
+        return view('pages.about.principle');
+    }
+
+    // services
+    public function loanScheme(){
+        return view('pages.services.loanScheme');
+    }
+    public function mobileBanking(){
+        return view('pages.services.mobileBanking');
+    }
+     public function other(){
+        return view('pages.services.other');
+    }
+    public function remittance(){
+        return view('pages.services.remittance');
+    }
+     public function savingScheme(){
+        return view('pages.services.savingScheme');
+    }
+     public function smsBanking(){
+        return view('pages.services.smsBanking');
     }
 
 }

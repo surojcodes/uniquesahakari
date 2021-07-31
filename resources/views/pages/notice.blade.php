@@ -21,7 +21,6 @@ Unique Cooperative | {{$notice->title}}
     <div class="col-md-7">
       <p>{!!$notice->detail!!}</p>
     </div>
-    
   </div>
   </div>
 </div>

@@ -41,40 +41,49 @@
         <!-- ======= Header ======= -->
         <header id="header" class="d-flex align-items-center">
             <div class="container d-flex align-items-center">
-
             <div class="logo mr-auto">
                 <!-- <h1 class="text-light"><a href="/">Uni<span>Que</span></a></h1> -->
                 <!-- Uncomment below if you prefer to use an image logo -->
                 <a href="/"><img src="{{asset('img/logo.png')}}" alt="" class="img-fluid"></a>
             </div>
-
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                 @auth
                     <li><a href="/home">Dashboard</a></li>
-
                 @else
                     <li><a href="/">Home</a></li>
                 @endauth
-                    <li><a href="/about">About</a></li>
-                    <li class="drop-down"><a href="">Services</a>
+                    <li class="drop-down"><a href="#">About</a>
                         <ul>
-                            <li><a href="/loanScheme">Loan Services</a></li>
-                            <li><a href="/savingScheme">Saving Scheme</a></li>
+                            <li><a href="/about/introduction">Introduction</a></li>
+                            <li><a href="/about/mvo">Mission,Vision and Objective</a></li>
+                            <li><a href="/about/membership">Membership</a></li>
+                            <li><a href="/about/principle">Principle of cooperative</a></li>
+                            <li><a href="/about/bod">Board of Directors</a></li>
                         </ul>
                     </li>
+                    <li class="drop-down"><a href="">Services</a>
+                        <ul>
+                            <li><a href="/services/loanScheme">Loan Services</a></li>
+                            <li><a href="/services/savingScheme">Saving Scheme</a></li>
+                            <li><a href="/services/mobileBanking">Mobile Banking</a></li>
+                            <li><a href="/services/smsBanking">SMS Banking</a></li>
+                            <li><a href="/services/remittance">Remittance</a></li>
+                            <li><a href="/services/other">Other</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="/gallery">Gallery</a></li>
                     <li><a href="/contact">Contact</a></li>
                     <li><a href="/notices">Notices</a></li>
                     <li><a href="/downloads">Downloads</a></li>
                     <li><a href="/online-account" class='animate__animated animate__pulse animate__infinite' style='color:#c48b31;'>Onine Account</a></li>
-                    {{-- <li><a href="/online-loan" class='animate__animated animate__pulse animate__infinite' style=' color: #c48b31;'>Apply Loan</a></li> --}}
+                    <li><a href="/online-loan" class='animate__animated animate__pulse animate__infinite' style=' color: #c48b31;'>Apply Loan</a></li>
                 </ul>
             </nav>
             </div>
         </header>
 
         @yield('content') 
-
         <!-- ======= Footer ======= -->
         <footer id="footer">
         <a href="#" class="back-to-top" style="display: inline;"><i class="icofont-simple-up"></i></a>
@@ -96,8 +105,12 @@
                     <div class="col-md-3 footer-links">
                         <h4>Our Services</h4>
                         <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="/loan">Loan Scheme</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="/saving">Saving Scheme</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="/services/loanScheme">Loan Services</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="/services/savingScheme">Saving Scheme</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="/services/mobileBanking">Mobile Banking</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="/services/smsBanking">SMS Banking</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="/services/remittance">Remittance</a></li>
+                            <li><i class="bx bx-chevron-right"></i><a href="/services/other">Other</a></li>
                         </ul>
                     </div>
                     <div class="col-md-3 text-left">

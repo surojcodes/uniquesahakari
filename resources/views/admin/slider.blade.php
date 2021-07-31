@@ -103,7 +103,7 @@
 @section('scripts')
 <script>
   function setId(id){
-      $('#deleteSliderForm').attr('action','/slider/'+id);
+      $('#deleteSliderForm').attr('action','/admin/slider/'+id);
   }
   $(document).ready( function () {
     $('#sliderTable').DataTable({
