@@ -7,8 +7,10 @@
 <div class="card shadow p-4">
   <div class="card-body">
   <div class="mb-5">
-    <h4>Introduction Page</h4>
+    <div class="text-center mb-5">
+    <h2><strong>Introduction Page</strong></h2>
     <small class='text-muted'>You can update introduction page here.</small>
+    </div>
        <form action="{{route('update.introduction')}}" method='POST' enctype="multipart/form-data" class="mt-3">
         @csrf
         @method('PUT')

@@ -7,8 +7,11 @@
 <div class="card shadow p-4">
   <div class="card-body">
   <div class="mb-5">
-    <h4>Membership Page</h4>
+<div class="text-center mb-5">
+    <h2><strong>Membership Page</strong></h2>
     <small class='text-muted'>You can update membership page here.</small>
+    </div>
+
    <form action="{{route('update.membership')}}" method='POST' enctype="multipart/form-data" class="mt-3">
         @csrf
         @method('PUT')

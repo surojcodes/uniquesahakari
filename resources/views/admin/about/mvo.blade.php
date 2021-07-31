@@ -7,8 +7,12 @@
 <div class="card shadow p-4">
   <div class="card-body">
   <div class="mb-5">
-    <h4>Mission, Vision and Objective Page</h4>
+
+    <div class="text-center mb-5">
+    <h2><strong>Mission, Vision and Objective Page</strong></h2>
     <small class='text-muted'>You can update mission, vision and objectives page here.</small>
+    </div>
+    
      <form action="{{route('update.mvo')}}" method='POST' enctype="multipart/form-data" class="mt-3">
         @csrf
         @method('PUT')
