@@ -97,8 +97,19 @@ Route::put('/admin/update-principle','AboutController@updatePrinciple')->name('u
 
 // Services Admin Routes
 Route::get('/admin/loanScheme', 'ServicesController@loanScheme');
+Route::put('/admin/update-loan','ServicesController@updateLoan')->name('update.loan');
+
 Route::get('/admin/mobileBanking', 'ServicesController@mobileBanking');
+Route::put('/admin/update-mobile','ServicesController@updateMobile')->name('update.mobile');
+
 Route::get('/admin/other', 'ServicesController@other');
+Route::put('/admin/update-other','ServicesController@updateOther')->name('update.other');
+
 Route::get('/admin/remittance', 'ServicesController@remittance');
+Route::put('/admin/update-remittance','ServicesController@updateRemittance')->name('update.remittance');
+
 Route::get('/admin/savingScheme', 'ServicesController@savingScheme');
+Route::put('/admin/update-saving','ServicesController@updateSaving')->name('update.saving');
+
 Route::get('/admin/smsBanking', 'ServicesController@smsBanking');
+Route::put('/admin/update-sms','ServicesController@updateSms')->name('update.sms');

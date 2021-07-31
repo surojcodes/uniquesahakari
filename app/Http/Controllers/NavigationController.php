@@ -13,6 +13,7 @@ use App\Introduction;
 use App\Mvo;
 use App\Principle;
 use App\Membership;
+use App\Service;
 
 class NavigationController extends Controller
 {
@@ -76,22 +77,28 @@ class NavigationController extends Controller
 
     // services
     public function loanScheme(){
-        return view('pages.services.loanScheme');
+        $service = Service::where('slug','loan-scheme')->first();
+        return view('pages.services.loanScheme',compact('service'));
     }
     public function mobileBanking(){
-        return view('pages.services.mobileBanking');
+        $service = Service::where('slug','mobile-banking')->first();
+        return view('pages.services.mobileBanking',compact('service'));
     }
-     public function other(){
-        return view('pages.services.other');
+    public function other(){
+        $service = Service::where('slug','other')->first();
+        return view('pages.services.other',compact('service'));
     }
     public function remittance(){
-        return view('pages.services.remittance');
+        $service = Service::where('slug','remittance')->first();
+        return view('pages.services.remittance',compact('service'));
     }
-     public function savingScheme(){
-        return view('pages.services.savingScheme');
+    public function savingScheme(){
+        $service = Service::where('slug','saving-scheme')->first();
+        return view('pages.services.savingScheme',compact('service'));
     }
-     public function smsBanking(){
-        return view('pages.services.smsBanking');
+    public function smsBanking(){
+        $service = Service::where('slug','sms-banking')->first();
+        return view('pages.services.smsBanking',compact('service'));
     }
 
 }
