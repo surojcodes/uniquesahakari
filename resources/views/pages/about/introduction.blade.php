@@ -10,9 +10,11 @@ Unique Cooperative | Introduction
   <hr style='width:40%'>
   </div>
   @if($introduction->image)
-  <div class="text-center">
+  <div class="text-center mb-4">
     <img src="/storage/about/{{$introduction->image}}" alt="Introduction" width="900px">
   </div>
+  <hr>
+
   @endif
   {!!$introduction->text!!}
 </div>

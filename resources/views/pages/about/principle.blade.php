@@ -10,9 +10,10 @@ Unique Cooperative | Principle of Cooperative
   <hr style='width:40%'>
   </div>
   @if($principle->image)
-  <div class="text-center">
+  <div class="text-center mb-4">
     <img src="/storage/about/{{$principle->image}}" alt="Introduction" width="900px">
   </div>
+  <hr>
   @endif
   {!!$principle->text!!}
 </div>

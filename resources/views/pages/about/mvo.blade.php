@@ -10,9 +10,10 @@ Unique Cooperative | Mission, Vision and Objective
   <hr style='width:40%'>
   </div>
   @if($mvo->image)
-  <div class="text-center">
+  <div class="text-center mb-4">
     <img src="/storage/about/{{$mvo->image}}" alt="Introduction" width="900px">
   </div>
+  <hr>
   @endif
   {!!$mvo->text!!}
 </div>

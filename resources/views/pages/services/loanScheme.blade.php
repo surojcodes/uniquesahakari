@@ -10,9 +10,11 @@ Unique Cooperative | Loan Scheme
   <hr style='width:40%'>
   </div>
   @if($service->image)
-  <div class="text-center">
+  <div class="text-center mb-4">
     <img src="/storage/services/{{$service->image}}" alt="Introduction" width="900px">
   </div>
+  <hr>
+
   @endif
   {!!$service->text!!}
 </div>
