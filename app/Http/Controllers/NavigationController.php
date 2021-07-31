@@ -10,6 +10,9 @@ use App\Slider;
 use App\Notice;
 use App\Download;
 use App\Introduction;
+use App\Mvo;
+use App\Principle;
+use App\Membership;
 
 class NavigationController extends Controller
 {
@@ -59,13 +62,16 @@ class NavigationController extends Controller
         return view('pages.about.introduction',compact('introduction'));
     }
      public function membership(){
-        return view('pages.about.membership');
+        $membership = Membership::first();
+        return view('pages.about.membership',compact('membership'));
     }
      public function mvo(){
-        return view('pages.about.mvo');
+        $mvo = Mvo::first();
+        return view('pages.about.mvo',compact('mvo'));
     }
      public function principle(){
-        return view('pages.about.principle');
+        $principle = Principle::first();
+        return view('pages.about.principle',compact('principle'));
     }
 
     // services

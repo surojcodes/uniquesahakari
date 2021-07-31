@@ -7,6 +7,9 @@ use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
 use App\Introduction;
+use App\Mvo;
+use App\Principle;
+use App\Membership;
 
 class AboutController extends Controller
 {
@@ -21,21 +24,22 @@ class AboutController extends Controller
         return view('admin.about.introduction',compact('introduction'));
     }
     public function membership(){
-        return view('admin.about.membership');
+        $membership = Membership::first();
+        return view('admin.about.membership',compact('membership'));
     }
     public function mvo(){
-        return view('admin.about.mvo');
+        $mvo = Mvo::first();
+        return view('admin.about.mvo',compact('mvo'));
     }
     public function principle(){
-        return view('admin.about.principle');
+        $principle = Principle::first();
+        return view('admin.about.principle',compact('principle'));
     }
 
     // Updates
     public function updateBod(Request $req){
-
     }
     public function updateIntroduction(Request $req){
-        
         $introduction = Introduction::first();
         if(key_exists('remove',$req->all())){
             Storage::delete('public/about/'.$introduction->image);
@@ -52,7 +56,7 @@ class AboutController extends Controller
             }
             $image=$req->image;
             $extension =\File::extension($image->getClientOriginalName());
-            $nameToStore = Str::slug($req->title).time().'.'.$extension;
+            $nameToStore = 'intro-'.time().'.'.$extension;
             $image->storeAs('public/about',$nameToStore);
 
             $data['image'] =$nameToStore;
@@ -60,14 +64,78 @@ class AboutController extends Controller
         $introduction->update($data);
         return back()->with('success','Introduction page Updated !');
     }
-    public function updateMembership(Request $req){
-        
-    }
     public function updateMvo(Request $req){
-        
+        $mvo = Mvo::first();
+        if(key_exists('remove',$req->all())){
+            Storage::delete('public/about/'.$mvo->image);
+            $mvo->update([
+                'image'=>null
+            ]);
+            return back()->with('success','Image Removed !');
+        }
+        $data['text'] = request('text');
+
+        if(request('image')){
+            if($mvo->image){
+                Storage::delete('public/about/'.$mvo->image);
+            }
+            $image=$req->image;
+            $extension =\File::extension($image->getClientOriginalName());
+            $nameToStore = 'mvo-'.time().'.'.$extension;
+            $image->storeAs('public/about',$nameToStore);
+
+            $data['image'] =$nameToStore;
+        }
+        $mvo->update($data);
+        return back()->with('success','Mission, Vision, Objective page Updated !');
+    }
+    public function updateMembership(Request $req){
+        $membership = Membership::first();
+        if(key_exists('remove',$req->all())){
+            Storage::delete('public/about/'.$membership->image);
+            $membership->update([
+                'image'=>null
+            ]);
+            return back()->with('success','Image Removed !');
+        }
+        $data['text'] = request('text');
+
+        if(request('image')){
+            if($membership->image){
+                Storage::delete('public/about/'.$membership->image);
+            }
+            $image=$req->image;
+            $extension =\File::extension($image->getClientOriginalName());
+            $nameToStore = 'membership-'.time().'.'.$extension;
+            $image->storeAs('public/about',$nameToStore);
+
+            $data['image'] =$nameToStore;
+        }
+        $membership->update($data);
+        return back()->with('success','Membership page Updated !');
     }
     public function updatePrinciple(Request $req){
-        
-    }
+         $principle = Principle::first();
+        if(key_exists('remove',$req->all())){
+            Storage::delete('public/about/'.$principle->image);
+            $principle->update([
+                'image'=>null
+            ]);
+            return back()->with('success','Image Removed !');
+        }
+        $data['text'] = request('text');
 
+        if(request('image')){
+            if($principle->image){
+                Storage::delete('public/about/'.$principle->image);
+            }
+            $image=$req->image;
+            $extension =\File::extension($image->getClientOriginalName());
+            $nameToStore = 'principle-'.time().'.'.$extension;
+            $image->storeAs('public/about',$nameToStore);
+            $data['image'] =$nameToStore;
+        }
+        $principle->update($data);
+        return back()->with('success','Principle page Updated !');
+    }
 }
