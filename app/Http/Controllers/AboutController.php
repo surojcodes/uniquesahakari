@@ -6,10 +6,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
 use Illuminate\Support\Str;
 
-use App\Introduction;
-use App\Mvo;
-use App\Principle;
-use App\Membership;
+use App\About;
 
 class AboutController extends Controller
 {
@@ -20,19 +17,19 @@ class AboutController extends Controller
         return view('admin.about.bod');
     }
     public function introduction(){
-        $introduction = Introduction::first();
+        $introduction = About::where('slug','introduction')->first();
         return view('admin.about.introduction',compact('introduction'));
     }
     public function membership(){
-        $membership = Membership::first();
+        $membership = About::where('slug','membership')->first();
         return view('admin.about.membership',compact('membership'));
     }
     public function mvo(){
-        $mvo = Mvo::first();
+        $mvo = About::where('slug','mvo')->first();
         return view('admin.about.mvo',compact('mvo'));
     }
     public function principle(){
-        $principle = Principle::first();
+        $principle = About::where('slug','principle')->first();
         return view('admin.about.principle',compact('principle'));
     }
 
@@ -40,13 +37,13 @@ class AboutController extends Controller
     public function updateBod(Request $req){
     }
     public function updateIntroduction(Request $req){
-        $introduction = Introduction::first();
+        $introduction = About::where('slug','introduction')->first();
         if(key_exists('remove',$req->all())){
             Storage::delete('public/about/'.$introduction->image);
             $introduction->update([
                 'image'=>null
             ]);
-            return back()->with('success','Introduction Image Removed !');
+            return back()->with('success','Image Removed !');
         }
         $data['text'] = request('text');
 
@@ -65,7 +62,7 @@ class AboutController extends Controller
         return back()->with('success','Introduction page Updated !');
     }
     public function updateMvo(Request $req){
-        $mvo = Mvo::first();
+        $mvo = About::where('slug','mvo')->first();
         if(key_exists('remove',$req->all())){
             Storage::delete('public/about/'.$mvo->image);
             $mvo->update([
@@ -90,7 +87,7 @@ class AboutController extends Controller
         return back()->with('success','Mission, Vision, Objective page Updated !');
     }
     public function updateMembership(Request $req){
-        $membership = Membership::first();
+        $membership = About::where('slug','membership')->first();
         if(key_exists('remove',$req->all())){
             Storage::delete('public/about/'.$membership->image);
             $membership->update([
@@ -115,7 +112,7 @@ class AboutController extends Controller
         return back()->with('success','Membership page Updated !');
     }
     public function updatePrinciple(Request $req){
-         $principle = Principle::first();
+         $principle = About::where('slug','principle')->first();
         if(key_exists('remove',$req->all())){
             Storage::delete('public/about/'.$principle->image);
             $principle->update([

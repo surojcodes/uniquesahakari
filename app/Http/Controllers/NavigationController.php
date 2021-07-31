@@ -9,10 +9,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Slider;
 use App\Notice;
 use App\Download;
-use App\Introduction;
-use App\Mvo;
-use App\Principle;
-use App\Membership;
+use App\About;
 use App\Service;
 
 class NavigationController extends Controller
@@ -59,19 +56,19 @@ class NavigationController extends Controller
         return view('pages.about.bod');
     }
     public function introduction(){
-        $introduction = Introduction::first();
+        $introduction = About::where('slug','introduction')->first();
         return view('pages.about.introduction',compact('introduction'));
     }
      public function membership(){
-        $membership = Membership::first();
+        $membership = About::where('slug','membership')->first();
         return view('pages.about.membership',compact('membership'));
     }
      public function mvo(){
-        $mvo = Mvo::first();
+        $mvo =About::where('slug','mvo')->first();
         return view('pages.about.mvo',compact('mvo'));
     }
      public function principle(){
-        $principle = Principle::first();
+        $principle = About::where('slug','principle')->first();
         return view('pages.about.principle',compact('principle'));
     }
 

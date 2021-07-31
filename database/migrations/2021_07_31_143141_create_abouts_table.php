@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateMvosTable extends Migration
+class CreateAboutsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateMvosTable extends Migration
      */
     public function up()
     {
-        Schema::create('mvos', function (Blueprint $table) {
+        Schema::create('abouts', function (Blueprint $table) {
             $table->id();
             $table->text('text')->nullable();
             $table->string('image')->nullable();
+            $table->string('slug')->nullable();
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateMvosTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('mvos');
+        Schema::dropIfExists('abouts');
     }
 }
