@@ -13,9 +13,6 @@ class AboutController extends Controller
     public function __construct(){
         $this->middleware('auth');
     }
-    public function bod(){
-        return view('admin.about.bod');
-    }
     public function introduction(){
         $introduction = About::where('slug','introduction')->first();
         return view('admin.about.introduction',compact('introduction'));
@@ -34,8 +31,6 @@ class AboutController extends Controller
     }
 
     // Updates
-    public function updateBod(Request $req){
-    }
     public function updateIntroduction(Request $req){
         $introduction = About::where('slug','introduction')->first();
         if(key_exists('remove',$req->all())){

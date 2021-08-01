@@ -11,6 +11,7 @@ use App\Notice;
 use App\Download;
 use App\About;
 use App\Service;
+use App\Bod;
 
 class NavigationController extends Controller
 {
@@ -53,7 +54,8 @@ class NavigationController extends Controller
     
     // About
     public function bod(){
-        return view('pages.about.bod');
+        $members = Bod::orderBy('rank')->get();
+        return view('pages.about.bod',compact('members'));
     }
     public function introduction(){
         $introduction = About::where('slug','introduction')->first();

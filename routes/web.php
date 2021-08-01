@@ -113,3 +113,10 @@ Route::put('/admin/update-saving','ServicesController@updateSaving')->name('upda
 
 Route::get('/admin/smsBanking', 'ServicesController@smsBanking');
 Route::put('/admin/update-sms','ServicesController@updateSms')->name('update.sms');
+
+// BOD Links
+Route::get('/admin/bod','BodController@index')->name('bod.index');
+Route::post('/admin/bod','BodController@store')->name('bod.store');
+Route::get('admin/bod/{id}','BodController@edit')->name('bod.edit');
+Route::put('admin/bod/{id}','BodController@update')->name('bod.update');
+Route::delete('admin/bod/{id}','BodController@destroy')->name('bod.delete');
