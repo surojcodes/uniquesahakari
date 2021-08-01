@@ -29,7 +29,7 @@
           <tr>
             <th scope="row">{{++$i}}</th>
             <td>{{$slider->title}}</td>
-            <td> <img src="storage/slider_images/{{$slider->image}}" alt="slider image" height='60px'> </td>
+            <td> <img src="/storage/slider_images/{{$slider->image}}" alt="slider image" height='60px'> </td>
             <td>
               <button onclick=setId(<?php echo $slider->id ?>) data-toggle="modal" data-target="#deleteSliderModal" class="btn btn-sm btn-danger">Delete</button>
             </td>
@@ -37,7 +37,6 @@
         @endforeach
       </tbody>
     </table>
-
   </div>
 </div>
 </div>
