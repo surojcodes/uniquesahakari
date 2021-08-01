@@ -6,10 +6,10 @@
 <div class="container my-5">
   <div class="card shadow p-4">
     <div class="card-body">
-      <div class="mb-5">
-        <h4>Edit Member : {{$member->name}}</h4>
-        <small class='text-muted'>You can edit members from here.</small>
-      </div>
+    <div class="text-center mb-5">  
+    <h2><strong>Edit Member : {{$member->name}}</strong></h2>
+    <small class='text-muted'>You can edit member details from here.</small>
+    </div>
       <form action="/admin/bod/{{$member->id}}" method='POST' enctype="multipart/form-data">
         @csrf
         @method('PUT')

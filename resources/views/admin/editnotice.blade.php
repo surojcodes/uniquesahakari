@@ -6,10 +6,12 @@
 <div class="container my-5">
   <div class="card shadow p-4">
     <div class="card-body">
-      <div class="mb-5">
-        <h4>Edit Notice : {{$notice->title}}</h4>
-        <small class='text-muted'>You can edit notice from here.</small>
-      </div>
+
+      <div class="text-center mb-5">  
+    <h2><strong>Edit Notice : {{$notice->title}}</strong></h2>
+    <small class='text-muted'>You can edit notice from here.</small>
+    </div>
+      
       <form action="#" method='POST' enctype="multipart/form-data">
         @csrf
         @method('PUT')
