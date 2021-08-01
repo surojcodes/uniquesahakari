@@ -10,7 +10,7 @@
     <h4>Slider Images</h4>
     <small class='text-muted'>You can add or delete slider images to be shown in the front page here.</small>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addSliderModal">
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addSliderModal">
     Add Slider
     </button>
     </div>
@@ -65,7 +65,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Upload</button>
+            <button type="submit" class="btn btn-success">Upload</button>
           </div>
         </form>
       </div>
@@ -89,7 +89,7 @@
                <small class='text-danger'>This process is irreversible</small>
             </div>
             <div class='modal-footer'>
-                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light-success font-weight-bold" data-dismiss="modal">Close</button>
                 <form id='deleteSliderForm' method='POST'>
                     @csrf
                     @method('delete')
