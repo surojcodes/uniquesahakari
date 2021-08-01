@@ -46,7 +46,7 @@
             @endif
             </td>
             <td> 
-              <img src="storage/notice_images/{{$notice->image}}" alt="notice image" height='60px'>
+              <img src="/storage/notice_images/{{$notice->image}}" alt="notice image" height='60px'>
              </td>
             <td>
             <a href="{{route('notices.edit',$notice->slug)}}" class="btn btn-warning btn-sm">Edit</a>

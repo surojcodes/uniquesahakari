@@ -12,14 +12,16 @@ Unique Cooperative | {{$notice->title}}
     <hr style='width:40%'>
   </div>
   <div class="row">
-  <div class="col-md-4 pt-4">
-      <img src="/storage/notice_images/{{$notice->image}}" alt="slider image" width='100%'>
-      <div class="text-center mt-2">
-        <a href="/storage/notice_images/{{$notice->image}}" target='_blank'>View Larger Image</a>
+    @if($notice->image !='no-image.png')
+      <div class="col-md-4 pt-4">
+        <img src="/storage/notice_images/{{$notice->image}}" alt="slider image" width='100%'>
+        <div class="text-center mt-2">
+          <a href="/storage/notice_images/{{$notice->image}}" target='_blank'>View Larger Image</a>
+        </div>
       </div>
-    </div>
-    <div class="col-md-7">
-      <p>{!!$notice->detail!!}</p>
+    @endif
+    <div class="col-md-7 px-5">
+      {!!$notice->detail!!}
     </div>
   </div>
   </div>

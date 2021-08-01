@@ -71,7 +71,7 @@ Unique Cooperative | Home
       </div>
       <div class="modal-body">
         <p>{!!$notice->detail!!}</p>
-        @if($notice->image !='no-image.jpg')
+        @if($notice->image !='no-image.png')
           <img src="storage/notice_images/{{$notice->image}}" alt="Notice Image" width="100%">
         @endif
       </div>
