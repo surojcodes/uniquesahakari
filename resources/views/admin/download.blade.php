@@ -10,7 +10,7 @@
     <h4>Downloads</h4>
     <small class='text-muted'>You can add or delete downloadable items here.</small>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addDownloadModal">
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addDownloadModal">
     Add Download Item
     </button>
     </div>
@@ -62,7 +62,7 @@
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-dark" data-dismiss="modal">Close</button>
-            <button type="submit" class="btn btn-primary">Upload</button>
+            <button type="submit" class="btn btn-success">Upload</button>
           </div>
         </form>
       </div>

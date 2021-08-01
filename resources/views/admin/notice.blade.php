@@ -10,7 +10,7 @@
     <h4>Notices</h4>
     <small class='text-muted'>You can add,edit or delete notices from here.</small>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-primary float-right" data-toggle="modal" data-target="#addNoticeModal">
+    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addNoticeModal">
     Add Notice
     </button>
     </div>

@@ -60,7 +60,7 @@
                <small class='text-danger'>This process is irreversible</small>
             </div>
             <div class='modal-footer'>
-                <button type="button" class="btn btn-light-primary font-weight-bold" data-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-light-success font-weight-bold" data-dismiss="modal">Close</button>
                 <form id='deleteApplicationForm' method='POST'>
                     @csrf
                     @method('delete')
