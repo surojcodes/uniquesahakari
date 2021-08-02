@@ -1269,7 +1269,7 @@ Unique Cooperative | Open Account Online
 				<small>Note: All uploads must be jpg, jpeg or png</small>
 			</div>
 		</div>
-		<input type="submit" value="Submit" class="btn btn-primary btn" />
+		<input type="submit" value="Submit" class="btn btn-success" />
 	</form>
 </div>
 @endsection @section('scripts')
