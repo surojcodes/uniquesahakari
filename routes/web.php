@@ -24,6 +24,7 @@ Route::get('/services/smsBanking', 'NavigationController@smsBanking');
 
 // Gallery
 Route::get('/gallery', 'NavigationController@gallery');
+Route::get('/gallery-images/{slug}', 'NavigationController@galleryImages');
 
 //notices
 Route::get('/notices', 'NavigationController@notices');

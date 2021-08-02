@@ -12,6 +12,7 @@ use App\Download;
 use App\About;
 use App\Service;
 use App\Bod;
+use App\Gallery;
 
 class NavigationController extends Controller
 {
@@ -49,7 +50,13 @@ class NavigationController extends Controller
         return view('pages.contact');
     }
     public function gallery(){
-        return view('pages.gallery');
+        $galleries = Gallery::orderBy('created_at','DESC')->get();
+        return view('pages.gallery',compact('galleries'));
+    }
+    public function galleryImages($slug){
+        $gallery = Gallery::where('slug',$slug)->first();
+        $images = $gallery->images;
+        return view('pages.galleryImages',compact('images','gallery'));
     }
     
     // About
