@@ -7,8 +7,12 @@
 <div class="card shadow p-4">
   <div class="card-body">
   <div class="mb-5">
-    <h4>Notices</h4>
+
+     <div class="text-center mb-5">
+    <h2><strong>Notices</strong></h2>
     <small class='text-muted'>You can add,edit or delete notices from here.</small>
+    </div>
+
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addNoticeModal">
     Add Notice

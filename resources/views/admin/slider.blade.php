@@ -7,8 +7,10 @@
 <div class="card shadow p-4">
   <div class="card-body">
   <div class="mb-5">
-    <h4>Slider Images</h4>
+ <div class="text-center mb-5">
+    <h2><strong>Slider Images</strong></h2>
     <small class='text-muted'>You can add or delete slider images to be shown in the front page here.</small>
+    </div>
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addSliderModal">
     Add Slider

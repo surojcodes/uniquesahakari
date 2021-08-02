@@ -7,8 +7,12 @@
 <div class="card shadow p-4">
   <div class="card-body">
   <div class="mb-5">
-    <h4>Downloads</h4>
+
+    <div class="text-center mb-5">
+    <h2><strong>Downloads</strong></h2>
     <small class='text-muted'>You can add or delete downloadable items here.</small>
+    </div>
+    
     <!-- Button trigger modal -->
     <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addDownloadModal">
     Add Download Item
