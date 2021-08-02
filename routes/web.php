@@ -120,3 +120,13 @@ Route::post('/admin/bod','BodController@store')->name('bod.store');
 Route::get('admin/bod/{id}','BodController@edit')->name('bod.edit');
 Route::put('admin/bod/{id}','BodController@update')->name('bod.update');
 Route::delete('admin/bod/{id}','BodController@destroy')->name('bod.delete');
+
+// Gallery and image Controller
+Route::get('/admin/gallery','GalleryController@index')->name('gallery.index');
+Route::post('/admin/gallery','GalleryController@store')->name('gallery.store');
+Route::get('/admin/gallery/{id}','GalleryController@show')->name('gallery.show');
+Route::put('/admin/gallery/{id}','GalleryController@update')->name('gallery.update');
+Route::delete('/admin/gallery/{id}','GalleryController@destroy')->name('gallery.destroy');
+
+Route::post('/admin/add-gallery-image/{id}','GalleryController@addImages')->name('galleryimage.store');
+Route::resource('image','ImagesController', array('only' => array('destroy')));
