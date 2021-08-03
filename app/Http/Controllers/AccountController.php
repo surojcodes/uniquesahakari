@@ -9,9 +9,9 @@ use Illuminate\Support\Facades\Storage;
 
 class AccountController extends Controller
 {
-    // public function __construct(){
-    //     $this->middleware('auth');
-    // }
+    public function __construct(){
+        $this->middleware('auth',['except'=>['store']]);
+    }
     public function store(Request $request){
         // dd($request->all());
        $data =  $request->validate([
@@ -161,7 +161,6 @@ class AccountController extends Controller
         $account->update(['application_id'=>$application_id]);
         return back()->with('success','Account Request Sent! Your application id is '.$application_id.'. Please save this id !');
     }
-
     public function view($app_id){
         $application = Account::where('application_id',$app_id)->first();
         return view('admin.application',compact('application'));
@@ -172,8 +171,6 @@ class AccountController extends Controller
     }
     public function update($app_id,Request $request){
         $application = Account::where('application_id',$app_id)->first();
-
-
         $data =  $request->validate([
             'operation'=>'required',
             'saving_scheme'=>'required',
