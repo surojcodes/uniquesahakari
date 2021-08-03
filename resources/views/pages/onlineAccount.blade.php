@@ -3,6 +3,7 @@
 Unique Cooperative | Open Account Online
 @endsection
 @section('content') 
+<div class="container">
 @if ($errors->any())
 <div class="alert alert-danger">
 	<ul>
@@ -17,7 +18,7 @@ Unique Cooperative | Open Account Online
 		<p>{{session('success')}}</p>
 	</div>
 @endif
-
+</div>
 <div class="container services mt-3 pb-5 mb-5 border shadow">
 	<div class="section-title">
 	<div class="logo m-auto">
