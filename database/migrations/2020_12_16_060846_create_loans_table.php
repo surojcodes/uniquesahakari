@@ -15,6 +15,17 @@ class CreateLoansTable extends Migration
     {
         Schema::create('loans', function (Blueprint $table) {
             $table->id();
+            $table->string('salutation');
+            $table->string('fullName');
+            $table->string('fatherName');
+            $table->string('motherName');
+            $table->string('grandfatherName');
+            $table->string('spouseName')->nullable();
+            $table->string('membershipNumber');
+            $table->string('loanAmount');
+            $table->string('loanAmountWords');
+            $table->string('loanType');
+            $table->string('repayTime');
             $table->timestamps();
         });
     }
