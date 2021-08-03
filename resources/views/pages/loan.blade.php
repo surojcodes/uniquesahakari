@@ -3,6 +3,7 @@
 Unique Cooperative | Apply for loan
 @endsection
 @section('content') 
+<div class="container">
 @if ($errors->any())
 <div class="alert alert-danger">
 	<ul>
@@ -17,6 +18,7 @@ Unique Cooperative | Apply for loan
 		<p>{{session('success')}}</p>
 	</div>
 @endif
+</div>
 
 <div class="container services mt-3 pb-5 mb-5 border shadow">
 	<div class="section-title">
@@ -153,6 +155,7 @@ Unique Cooperative | Apply for loan
 							placeholder="सदस्यता नं."
 							value="{{ old('membershipNumber') }}"
 							name="membershipNumber"
+							required
 						/>
 					</div>
 				</div>
@@ -227,6 +230,7 @@ Unique Cooperative | Apply for loan
 							placeholder="भुक्तानी अवधि"
 							value="{{ old('repayTime') }}"
 							name="repayTime"
+							required
 						/>
 					</div>
 				</div>

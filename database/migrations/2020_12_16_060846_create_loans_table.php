@@ -26,6 +26,7 @@ class CreateLoansTable extends Migration
             $table->string('loanAmountWords');
             $table->string('loanType');
             $table->string('repayTime');
+            $table->string('loan_id')->nullable();
             $table->timestamps();
         });
     }

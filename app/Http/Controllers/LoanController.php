@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Loan;
 
 class LoanController extends Controller
 {
@@ -20,6 +21,11 @@ class LoanController extends Controller
         ]);
         $data['spouseName'] = request('spouseName');
         $data['loanType'] = request('loanType');
-        dd($data);
+
+        $loan = Loan::create($data);
+        $loan_id = uniqid().'_'.$loan->id;
+        $loan->update(['loan_id'=>$loan_id]);
+
+        return back()->with('success','Loan Request Sent! Your loan request id is '.$loan_id.'. Please save this id !');
     }
 }
