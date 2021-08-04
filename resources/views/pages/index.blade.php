@@ -41,30 +41,30 @@ Unique Cooperative | Home
 @endif
 {{-- recent notices --}}
 @if(count($recentNotices))
-<section id='recent' class="my-5">
-  <div class="container"> 
+<section id='recent' class="mt-5">
+  <div class="containerx"> 
     <div class="section-title">
       <span>Recent Notices</span>
       <h2>Recent Notices</h2>
       <hr style='width:40%'>
     </div>
-    <div class="row justify-content-around">
-    @foreach($recentNotices as $recent)
-    <div class="col-md-4 mt-4 mt-md-0">
-      <div class="icon-box">
-          <i class='mr-4'><img src="storage/notice_images/{{$recent->image}}" alt="slider image" height='60px'></i>
-        <h4><a href="/view-notice/{{$recent->slug}}">{{$recent->title}}</a></h4>
-        <p>{!!\Illuminate\Support\Str::limit(strip_tags($recent->detail), 30, $end='...')!!}  .. <a href="/view-notice/{{$recent->slug}}">Read more</a></p>
-        <small class="float-right text-muted"> <em>Posted on {{date('Y-m-d', strtotime($recent->created_at))}}</em> </small>
+    <div class="row justify-content-center">
+      @foreach($recentNotices as $recent)
+      <div class="test col-md-3 mt-4 mt-md-0 mx-3 shadow px-5 py-3">
+          <h4><a href="/view-notice/{{$recent->slug}}"><strong>{{$recent->title}}</strong></a></h4> <hr>
+          <p>{!!\Illuminate\Support\Str::limit(strip_tags($recent->detail), 80, $end='...')!!}  .. <a href="/view-notice/{{$recent->slug}}"><small>Read more</small></a></p>
+          <small class="text-muted"> <em><i class='bx bxs-calendar'></i> {{date('Y-m-d', strtotime($recent->created_at))}}</em> </small>
       </div>
+      @endforeach
     </div>
-    @endforeach
+    <div class="text-center py-3">
+    <a href="/notices">View All Notices...</a>
     </div>
   </div>
 </section>
 @endif
 <!-- Nepali Stuff -->
-<div class="container my-4">
+<div class="container">
    <div class="section-title">
       <span>Utilities</span>
       <h2>Utilities</h2>
@@ -99,7 +99,7 @@ Unique Cooperative | Home
       </div>
       <div class="modal-body">
         <p>{!!$notice->detail!!}</p>
-        @if($notice->image !='no-image.png')
+        @if($notice->image !='no-image.jpg')
           <img src="storage/notice_images/{{$notice->image}}" alt="Notice Image" width="100%">
         @endif
       </div>

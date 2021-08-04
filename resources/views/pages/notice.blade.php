@@ -11,16 +11,16 @@ Unique Cooperative | {{$notice->title}}
     <small class="text-muted">Posted on {{date('Y-m-d', strtotime($notice->created_at))}}</small>
     <hr style='width:40%'>
   </div>
-  <div class="row">
-    @if($notice->image !='no-image.png')
+  <div class="row justify-content-center">
+    @if($notice->image !='no-image.jpg')
       <div class="col-md-4 pt-4">
-        <img src="/storage/notice_images/{{$notice->image}}" alt="slider image" width='100%'>
+        <img src="/storage/notice_images/{{$notice->image}}" alt="no image" width='100%'>
         <div class="text-center mt-2">
-          <a href="/storage/notice_images/{{$notice->image}}" target='_blank'>View Larger Image</a>
+          <small><a href="/storage/notice_images/{{$notice->image}}" target='_blank'>View Larger Image</a></small>
         </div>
       </div>
     @endif
-    <div class="col-md-7 px-5">
+    <div class="px-5 my-4">
       {!!$notice->detail!!}
     </div>
   </div>

@@ -22,7 +22,7 @@ class NoticeController extends Controller
         $data['detail'] = request('description');
         $data['slug'] = Str::slug($request->title).time();
 
-        $data['image'] = 'no-image.png';
+        $data['image'] = 'no-image.jpg';
         if(request('image')){
         $image=$request->image;
         $extension =\File::extension($image->getClientOriginalName());
