@@ -56,7 +56,7 @@
                 </button>
             </div>
             <div class="modal-body">
-               <p>You are going to delete an account. Are you sure?</p>
+               <p>You are going to delete an account request. Are you sure?</p>
                <small class='text-danger'>This process is irreversible</small>
             </div>
             <div class='modal-footer'>
