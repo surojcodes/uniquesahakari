@@ -96,13 +96,16 @@
                     <div class="col-md-3 footer-links">
                         <h4>Useful Links</h4>
                         <ul>
-                        <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="/about">About us</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="/notices">Notices</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="/downloads">Downloads</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="/contact">Contact</a></li>
-                        <li><i class="bx bx-chevron-right"></i> <a href="/online-account">Open Online Account</a></li>
-
+                            @forelse($links as $link)
+                                 <li><i class="bx bx-chevron-right"></i> <a href="{{$link->URL}}" target="_blank">{{$link->title}}</a></li>
+                            @empty
+                                <li><i class="bx bx-chevron-right"></i> <a href="/">Home</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="/about">About us</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="/notices">Notices</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="/downloads">Downloads</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="/contact">Contact</a></li>
+                                <li><i class="bx bx-chevron-right"></i> <a href="/online-account">Open Online Account</a></li>
+                            @endforelse
                         </ul>
                     </div>
                     <div class="col-md-3 footer-links">

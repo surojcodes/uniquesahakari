@@ -5,6 +5,7 @@ namespace App\Providers;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Support\Facades\View;
 use App\Information;
+use App\Link;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -30,5 +31,7 @@ class AppServiceProvider extends ServiceProvider
         }
         $info = Information::first();
         View::share('info', $info);
+        $links = Link::orderBy('created_at','DESC')->get();
+        View::share('links', $links);
     }
 }
