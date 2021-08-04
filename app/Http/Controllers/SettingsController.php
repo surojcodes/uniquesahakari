@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Information;
+use App\Link;
 
 class SettingsController extends Controller
 {
@@ -12,7 +13,8 @@ class SettingsController extends Controller
         return view('admin.information',compact('info'));
     }
     public function links(){
-
+        $links = Link::orderBy('created_at','DESC')->get();
+        return view('admin.links',compact('links'));
     }
     public function updateInformation(Request $req){
         $info = Information::first();
@@ -31,13 +33,22 @@ class SettingsController extends Controller
         $info->update($data);
         return back()->with('success','Information Updated!');
     }
-    public function storeLinks(Request $req){
-        
+    public function storeLink(Request $req){
+        $data['title']=$req->title;
+        $data['url']=$req->url;
+        Link::create($data);
+        return back()->with('success','Link Added!');
     }
-    public function updateLinks(Request $req,$id){
-        
+    public function updateLink(Request $req,$id){
+        $link = Link::find($id);
+        $data['title']=$req->title;
+        $data['url']=$req->url;
+        $link->update($data);
+        return back()->with('success','Link Updated!');
     }
-    public function deleteLinks($id){
-        
+    public function deleteLink($id){
+        Link::find($id)->delete();
+        return back()->with('success','Link Deleted!');
+
     }
 }

@@ -142,3 +142,6 @@ Route::get('/admin/information','SettingsController@information');
 Route::put('/admin/update-information','SettingsController@updateInformation')->name('update.info');
 
 Route::get('/admin/links','SettingsController@links');
+Route::post('/admin/link','SettingsController@storeLink')->name('link.store');
+Route::put('/admin/link/{id}','SettingsController@updateLink')->name('link.update');
+Route::delete('/admin/link/{id}','SettingsController@deleteLink')->name('link.delete');
