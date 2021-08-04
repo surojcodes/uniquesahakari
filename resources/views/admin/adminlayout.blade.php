@@ -45,9 +45,6 @@
         <header id="header" class="d-flex align-items-center">
             <div class="container d-flex align-items-center">
             @auth
-            <div class="logo mr-auto">
-                <a href="/"><img src="{{asset('img/logo.png')}}" alt="" class="img-fluid"></a>
-            </div>
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                     <li><a href="/home">Account</a></li>
@@ -73,6 +70,12 @@
                             <li><a href="/admin/membership">Membership</a></li>
                             <li><a href="/admin/principle">Principle of cooperative</a></li>
                             <li><a href="/admin/bod">Board of Directors</a></li>
+                        </ul>
+                    </li>
+                    <li class="drop-down"><a href="#">Settings</a>
+                        <ul>
+                            <li><a href="/admin/information">Information</a></li>
+                            <li><a href="/admin/links">External Links</a></li>
                         </ul>
                     </li>
                     <li>

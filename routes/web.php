@@ -137,3 +137,8 @@ Route::delete('/admin/gallery/{id}','GalleryController@destroy')->name('gallery.
 Route::post('/admin/add-gallery-image/{id}','GalleryController@addImages')->name('galleryimage.store');
 Route::resource('image','ImagesController', array('only' => array('destroy')));
 
+// Settings Admin
+Route::get('/admin/information','SettingsController@information');
+Route::put('/admin/update-information','SettingsController@updateInformation')->name('update.info');
+
+Route::get('/admin/links','SettingsController@links');
