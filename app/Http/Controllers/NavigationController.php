@@ -19,7 +19,8 @@ class NavigationController extends Controller
     public function index(){
         $sliders = Slider::orderBy('created_at','desc')->get();
         $notice = Notice::where('set_front',1)->first();
-        return view('pages.index',compact('sliders','notice'));
+        $recentNotices = Notice::orderBy('created_at','desc')->take(3)->get();
+        return view('pages.index',compact('sliders','notice','recentNotices'));
     }
     public function notices(){
         $notices = DB::table('notices')->orderBy('created_at', 'desc')->paginate(6);

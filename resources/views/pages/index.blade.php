@@ -39,8 +39,37 @@ Unique Cooperative | Home
     </div>
 </section><!-- End Hero -->
 @endif
-<!-- Nepali Calender -->
-<div class="container">
+{{-- recent notices --}}
+@if(count($recentNotices))
+<section id='recent' class="my-5">
+  <div class="container"> 
+    <div class="section-title">
+      <span>Recent Notices</span>
+      <h2>Recent Notices</h2>
+      <hr style='width:40%'>
+    </div>
+    <div class="row justify-content-around">
+    @foreach($recentNotices as $recent)
+    <div class="col-md-4 mt-4 mt-md-0">
+      <div class="icon-box">
+          <i class='mr-4'><img src="storage/notice_images/{{$recent->image}}" alt="slider image" height='60px'></i>
+        <h4><a href="/view-notice/{{$recent->slug}}">{{$recent->title}}</a></h4>
+        <p>{!!\Illuminate\Support\Str::limit(strip_tags($recent->detail), 30, $end='...')!!}  .. <a href="/view-notice/{{$recent->slug}}">Read more</a></p>
+        <small class="float-right text-muted"> <em>Posted on {{date('Y-m-d', strtotime($recent->created_at))}}</em> </small>
+      </div>
+    </div>
+    @endforeach
+    </div>
+  </div>
+</section>
+@endif
+<!-- Nepali Stuff -->
+<div class="container my-4">
+   <div class="section-title">
+      <span>Utilities</span>
+      <h2>Utilities</h2>
+      <hr style='width:40%'>
+    </div>
   <div class="row mb-5">
     <div class="col-md-8">
     <h5 class='ml-4'>Preeti to Unicode Converter</h5>
@@ -57,7 +86,6 @@ Unique Cooperative | Home
     </div>
   </div>
 </div>
-
 
 @if($notice)
 <div class="modal fade" id="frontNoticeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
