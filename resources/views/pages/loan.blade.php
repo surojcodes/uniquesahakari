@@ -207,17 +207,17 @@ Unique Cooperative | Apply for loan
 					<div class="form-group">
 							<label>Loan Type (कर्जाको किसिम) : </label>
 							<select name="loanType" class="form-control">
-								<option value="business" selected>Business Loan</option>
-								<option value="higher">Higher Purchase Loan</option>
-								<option value="share">Share Membeship Loan</option>
-								<option value="landHouse">Land/House Purchase Loan</option>
-								<option value="project">Project Loan</option>
-								<option value="foreign">Foreign Employment and Study Loan</option>
-								<option value="agriculture">Agriculture and Livestock Loan</option>
-								<option value="fixed">Fixed Deposit Receipt Loan</option>
-								<option value="medical">Medical Treatment Loan</option>
-								<option value="relief">Member Relief Loan</option>
-								<option value="other">Other Loan</option>
+								<option value="Business Loan" selected>Business Loan</option>
+								<option value="Higher Purchase Loan">Higher Purchase Loan</option>
+								<option value="Share Membeship Loan">Share Membeship Loan</option>
+								<option value="Land/House Purchase Loan">Land/House Purchase Loan</option>
+								<option value="Project Loan">Project Loan</option>
+								<option value="Foreign Employment and Study Loan">Foreign Employment and Study Loan</option>
+								<option value="Agriculture and Livestock Loan">Agriculture and Livestock Loan</option>
+								<option value="Fixed Deposit Receipt Loan">Fixed Deposit Receipt Loan</option>
+								<option value="Medical Treatment Loan">Medical Treatment Loan</option>
+								<option value="Member Relief Loan">Member Relief Loan</option>
+								<option value="Other Loan">Other Loan</option>
 							</select>
 						</div>
 				</div>

@@ -76,7 +76,12 @@ Route::get('/admin/print-application/{app_id}','AccountController@print')->name(
 Route::delete('/admin/delete-application/{app_id}','AccountController@delete')->name('application-delete');
 Route::put('/admin/update-application/{app_id}','AccountController@update')->name('application-update');
 
-//Loan admin routes
+
+// Loan admin links
+Route::get('/admin/loan','LoanController@viewLoans');
+Route::get('/admin/view-loan/{loan_id}','LoanController@view')->name('loan-detail');
+Route::get('/admin/print-loan/{loan_id}','LoanController@print')->name('loan-print');
+Route::delete('/admin/delete-loan/{loan_id}','LoanController@delete')->name('loan-delete');
 Route::post('/admin/add-loan','LoanController@store')->name('loan-store');
 
 // About Admin routes
@@ -131,3 +136,4 @@ Route::delete('/admin/gallery/{id}','GalleryController@destroy')->name('gallery.
 
 Route::post('/admin/add-gallery-image/{id}','GalleryController@addImages')->name('galleryimage.store');
 Route::resource('image','ImagesController', array('only' => array('destroy')));
+

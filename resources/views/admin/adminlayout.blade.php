@@ -51,7 +51,7 @@
             <nav class="nav-menu d-none d-lg-block">
                 <ul>
                     <li><a href="/home">Account</a></li>
-                    <!-- <li><a href="#">Loan Application </a></li> -->
+                    <li><a href="/admin/loan">Loan </a></li>
                     <li><a href="{{route('sliders.index')}}">Slider Images</a></li>
                     <li><a href="{{route('notices.index')}}">Notices</a></li>
                     <li><a href="{{route('downloads.index')}}">Downloads</a></li>
