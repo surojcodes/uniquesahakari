@@ -13,10 +13,11 @@
     <small class='text-muted'>You can create edit, delete and add images to alleries from here.</small>
     </div>
 
-        <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addGalleryModal">
+        <button type="button" class="btn btn-success float-right mb-3" data-toggle="modal" data-target="#addGalleryModal">
         Add Gallery
         </button>
       </div>
+      <div class="table-responsive text-center">
     <table class="table table-bordered table-hover" id="galleryTable">
       <thead>
        <tr role="row">
@@ -61,7 +62,7 @@
         @endforeach
       </tbody>
     </table>
-
+</div>
     </div>
   </div>
 </div>

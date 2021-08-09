@@ -14,10 +14,11 @@
     </div>
     
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addDownloadModal">
+    <button type="button" class="btn btn-success float-right mb-3" data-toggle="modal" data-target="#addDownloadModal">
     Add Download Item
     </button>
     </div>
+    <div class="text-center table-responsive">
     <table class="table table-bordered table-hover" id="downloadTable">
       <thead>
         <tr>
@@ -39,7 +40,7 @@
         @endforeach
       </tbody>
     </table>
-
+</div>
   </div>
 </div>
 </div>

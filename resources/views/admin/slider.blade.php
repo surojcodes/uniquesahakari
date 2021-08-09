@@ -12,10 +12,13 @@
     <small class='text-muted'>You can add or delete slider images to be shown in the front page here.</small>
     </div>
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addSliderModal">
+    <button type="button" class="btn btn-success float-right mb-3" data-toggle="modal" data-target="#addSliderModal">
     Add Slider
     </button>
     </div>
+
+    <div class="text-center table-responsive">
+
     <table class="table table-bordered table-hover" id="sliderTable">
       <thead>
         <tr>
@@ -39,6 +42,7 @@
         @endforeach
       </tbody>
     </table>
+    </div>
   </div>
 </div>
 </div>

@@ -10,6 +10,8 @@
     <h4>Online New Account Applications</h4>
     <small class='text-muted'>You can view online new account application requests here.</small>
     </div>
+    <div class="text-center table-responsive">
+
     <table class="table table-bordered table-hover" id="applicationTable">
       <thead>
         <tr>
@@ -31,15 +33,16 @@
             <td>{{$application->mobile}}</td>
             <td>{{$application->temporary_municipality.'-'.$application->temporary_ward}}</td>
             <td>
-              <a href="{{route('application-detail',$application->application_id)}}" class="btn btn-sm btn-success">Detail</a>
-              <a href="{{route('application-print',$application->application_id)}}" target="_blank" class="btn btn-sm btn-info">Print</a>
+              <a href="{{route('application-detail',$application->application_id)}}" class="btn btn-sm btn-success mb-2">Detail</a>
+              <a href="{{route('application-print',$application->application_id)}}" target="_blank" class="btn btn-sm btn-info mb-2">Print</a>
               <!-- <a href="{{route('application-edit',$application->application_id)}}" class="btn btn-sm btn-warning">Edit</a> -->
-              <button onclick=setId(<?php echo $application->id ?>) data-toggle="modal" data-target="#deleteApplicationModal" class="btn btn-sm btn-danger">Delete</button>
+              <button onclick=setId(<?php echo $application->id ?>) data-toggle="modal" data-target="#deleteApplicationModal" class="btn btn-sm btn-danger mb-2">Delete</button>
             </td>
           </tr>
         @endforeach
       </tbody>
     </table>
+    </div>
   </div>
 </div>
 </div>

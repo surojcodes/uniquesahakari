@@ -7,13 +7,18 @@
 <div class="card shadow p-4">
   <div class="card-body">
   <div class="mb-5">
-    <h4>Board of Directors</h4>
+
+    <div class="text-center mb-5">  
+    <h2><strong>Board of Directors</strong></h2>
     <small class='text-muted'>You can add, edit or delete board members from here.</small>
+    </div>
+
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addMemberModal">
+    <button type="button" class="btn btn-success float-right mb-3" data-toggle="modal" data-target="#addMemberModal">
     Add Member
     </button>
     </div>
+    <div class="table-responsive text-center">
     <table class="table table-bordered table-hover" id="memberTable">
       <thead>
         <tr>
@@ -37,13 +42,14 @@
               <img src="/storage/bod/{{$member->image}}" alt="member" height='60px'>
              </td>
             <td>
-              <a href="{{route('bod.edit',$member->id)}}" class="btn btn-warning btn-sm">Edit</a>
-              <button onclick=setId(<?php echo $member->id ?>) data-toggle="modal" data-target="#deleteMemberModal" class="btn btn-sm btn-danger">Delete</button>
+              <a href="{{route('bod.edit',$member->id)}}" class="btn btn-warning btn-sm mb-2">Edit</a>
+              <button onclick=setId(<?php echo $member->id ?>) data-toggle="modal" data-target="#deleteMemberModal" class="btn btn-sm btn-danger mb-2">Delete</button>
             </td>
           </tr>
         @endforeach
       </tbody>
     </table>
+    </div>
   </div>
 </div>
 </div>

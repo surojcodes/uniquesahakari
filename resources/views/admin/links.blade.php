@@ -13,11 +13,12 @@
     <small class='text-muted'>You can create edit, delete and add external links from here.</small>
     </div>
 
-        <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addlinkModal">
+        <button type="button" class="btn btn-success float-right mb-3" data-toggle="modal" data-target="#addlinkModal">
         Add Link
         </button>
       </div>
-    <table class="table table-bordered table-hover" id="linkTable">
+    <div class="table-responsive text-center">
+    <table class="table table-bordered table-hover " id="linkTable">
       <thead>
        <tr role="row">
           <th>S.N</th>
@@ -36,13 +37,14 @@
               <td>{{$link->title}}</td>
               <td>{{$link->URL}}</td>
               <td>
-                  <a href="#" class="btn btn-sm btn-primary editlink"><i class='bx bxs-edit'></i></a> 
-                  <a href="#" class="btn btn-danger btn-sm deletelink"><i class='bx bxs-trash-alt' ></i></a>
+                  <a href="#" class="btn btn-sm btn-primary editlink"><i class='bx bxs-edit mb-2'></i></a> 
+                  <a href="#" class="btn btn-danger btn-sm deletelink"><i class='bx bxs-trash-alt mb-2' ></i></a>
               </td>
           </tr>
         @endforeach
       </tbody>
     </table>
+      </div>
     </div>
   </div>
 </div>

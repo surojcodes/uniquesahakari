@@ -10,6 +10,7 @@
     <h4>Online New Loan Applications</h4>
     <small class='text-muted'>You can view online new loan application requests here.</small>
     </div>
+    <div class="text-center table-responsive">
     <table class="table table-bordered table-hover" id="applicationTable">
       <thead>
         <tr>
@@ -29,14 +30,15 @@
             <td>{{$application->membershipNumber}}</td>
             <td>{{$application->loanAmount}}</td>
             <td>
-              <a href="{{route('loan-detail',$application->loan_id)}}" class="btn btn-sm btn-success">Detail</a>
-              <a href="{{route('loan-print',$application->loan_id)}}" target="_blank" class="btn btn-sm btn-info">Print</a>
-              <button onclick=setId(<?php echo $application->id ?>) data-toggle="modal" data-target="#deleteApplicationModal" class="btn btn-sm btn-danger">Delete</button>
+              <a href="{{route('loan-detail',$application->loan_id)}}" class="btn btn-sm btn-success mb-2">Detail</a>
+              <a href="{{route('loan-print',$application->loan_id)}}" target="_blank" class="btn btn-sm btn-info mb-2">Print</a>
+              <button onclick=setId(<?php echo $application->id ?>) data-toggle="modal" data-target="#deleteApplicationModal" class="btn btn-sm btn-danger mb-2">Delete</button>
             </td>
           </tr>
         @endforeach
       </tbody>
     </table>
+    </div>
   </div>
 </div>
 </div>

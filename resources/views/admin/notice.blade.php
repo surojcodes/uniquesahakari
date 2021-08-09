@@ -14,10 +14,11 @@
     </div>
 
     <!-- Button trigger modal -->
-    <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addNoticeModal">
+    <button type="button" class="btn btn-success float-right mb-3" data-toggle="modal" data-target="#addNoticeModal">
     Add Notice
     </button>
     </div>
+    <div class="text-center table-responsive">
     <table class="table table-bordered table-hover" id="noticeTable">
       <thead>
         <tr>
@@ -53,14 +54,14 @@
               <img src="/storage/notice_images/{{$notice->image}}" alt="notice image" height='60px'>
              </td>
             <td>
-            <a href="{{route('notices.edit',$notice->slug)}}" class="btn btn-warning btn-sm">Edit</a>
-              <button onclick=setId(<?php echo $notice->id ?>) data-toggle="modal" data-target="#deleteNoticeModal" class="btn btn-sm btn-danger">Delete</button>
+            <a href="{{route('notices.edit',$notice->slug)}}" class="btn btn-warning btn-sm mb-2">Edit</a>
+              <button onclick=setId(<?php echo $notice->id ?>) data-toggle="modal" data-target="#deleteNoticeModal" class="btn btn-sm btn-danger mb-2">Delete</button>
             </td>
           </tr>
         @endforeach
       </tbody>
     </table>
-
+</div>
   </div>
 </div>
 </div>
