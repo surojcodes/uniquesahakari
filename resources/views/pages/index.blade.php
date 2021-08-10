@@ -91,13 +91,14 @@ Unique Cooperative | Home
 <div class="modal fade" id="frontNoticeModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
     <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title " id="exampleModalLongTitle">{{$notice->title}}</h5>
-        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+      <div class="text-center pt-4">
+        <h5 class="modal-title"><strong>{{$notice->title}}</strong></h5>
+        {{-- <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
-        </button>
+        </button> --}}
+        <hr>
       </div>
-      <div class="modal-body">
+      <div class="modal-body pt-0 px-5">
         <p>{!!$notice->detail!!}</p>
         @if($notice->image !='no-image.jpg')
           <img src="storage/notice_images/{{$notice->image}}" alt="Notice Image" width="100%">
