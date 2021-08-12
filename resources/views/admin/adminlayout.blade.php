@@ -100,11 +100,11 @@
         <footer id="footer">
             <div class="container">
                 <div class="copyright">
-                    &copy; Copyright <strong><span>UniqueSacos</span></strong>. All Rights Reserved
+                    &copy; Copyright <strong><span>{{$info->name}}</span></strong> All Rights Reserved
                 </div>
                 <div class="credits">
                     Made By
-                    <a href="https://msuroj.com.np/">SurojCodes</a>
+                    <a href="https://github.com/surojcodes">SurojCodes</a>
                     <!-- All the links in the footer should remain intact. -->
                     <!-- You can delete the links only if you purchased the pro version. -->
                     <!-- Licensing information: https://bootstrapmade.com/license/ -->
