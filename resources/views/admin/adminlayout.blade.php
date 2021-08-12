@@ -31,8 +31,8 @@
         <section id="topbar" class="d-none d-lg-block">
             <div class="container d-flex">
             <div class="contact-info mr-auto">
-                <i class="icofont-envelope"></i><span style=' color: #c48b31;'>uniquesacos@gmail.com</span>
-                <i class="icofont-phone phone-icon"></i> <span style=' color: #c48b31;'>01-4350919</span>
+                <i class="icofont-envelope"></i><span style=' color: #c48b31;'>{{$info->email}}</span>
+                <i class="icofont-phone phone-icon"></i> <span style=' color: #c48b31;'>{{$info->phone}}</span>
             </div>
             <div class="social-links">
                 @auth
