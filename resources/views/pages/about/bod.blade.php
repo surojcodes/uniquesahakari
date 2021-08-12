@@ -15,7 +15,7 @@ Unique Cooperative | Board of Directors
           <div class="col-lg-4 col-md-6 col-sm-6 text-center">
             <div class="member d-flex align-items-center flex-column ">
               <div class="pic"><img src="/storage/bod/{{$top_member->image}}" class="img-fluid" alt="{{$top_member->name}}"></div>
-              <div class="member-info mt-3">
+              <div class="member-info mt-3 text-center mx-0 px-0">
                 <h4>{{$top_member->name}}</h4>
                 <span class="pb-0">{{$top_member->position}}</span>
                 <hr>
@@ -30,7 +30,7 @@ Unique Cooperative | Board of Directors
           <div class="col-lg-4 col-md-6 col-sm-6 text-center">
             <div class="member d-flex align-items-center flex-column ">
               <div class="pic"><img src="/storage/bod/{{$member->image}}" class="img-fluid" alt="{{$member->name}}"></div>
-              <div class="member-info mt-3">
+              <div class="member-info mt-3 text-center mx-0 px-0">
                 <h4>{{$member->name}}</h4>
                 <span class="pb-0">{{$member->position}}</span>
                 <hr>
