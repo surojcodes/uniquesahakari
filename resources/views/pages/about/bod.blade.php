@@ -3,12 +3,28 @@
 Unique Cooperative | Board of Directors
 @endsection
 @section('content')
- <section id="team" class="team">
+ <section class="team" style="margin-top: 0.6rem; padding-top:0">
       <div class="container">
         <div class="section-title">
           <span>Board of Directors</span>
           <h2>Board of Directors</h2>
+          <hr style='width:40%'>
         </div>
+        @if($top_member)
+        <div class="row justify-content-center">
+          <div class="col-lg-4 col-md-6 col-sm-6 text-center">
+            <div class="member d-flex align-items-center flex-column ">
+              <div class="pic"><img src="/storage/bod/{{$top_member->image}}" class="img-fluid" alt="{{$top_member->name}}"></div>
+              <div class="member-info mt-3">
+                <h4>{{$top_member->name}}</h4>
+                <span class="pb-0">{{$top_member->position}}</span>
+                <hr>
+                <p>{{$top_member->text}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        @endif
         <div class="row">
       @forelse($members as $member)
           <div class="col-lg-4 col-md-6 col-sm-6 text-center">
@@ -23,7 +39,7 @@ Unique Cooperative | Board of Directors
             </div>
           </div>
       @empty
-        <h4 class="text-center">No members!</h4>
+        
       @endforelse
         </div>
       </div>

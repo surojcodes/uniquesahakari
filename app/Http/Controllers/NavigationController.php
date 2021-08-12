@@ -62,8 +62,9 @@ class NavigationController extends Controller
     
     // About
     public function bod(){
-        $members = Bod::orderBy('rank')->get();
-        return view('pages.about.bod',compact('members'));
+        $top_member = Bod::where('rank',1)->first();
+        $members = Bod::orderBy('created_at','DESC')->where('rank','>',1)->get();
+        return view('pages.about.bod',compact('members','top_member'));
     }
     public function introduction(){
         $introduction = About::where('slug','introduction')->first();
