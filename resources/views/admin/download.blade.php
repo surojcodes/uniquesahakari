@@ -105,7 +105,7 @@
 @section('scripts')
 <script>
   function setId(id){
-      $('#deleteDownloadForm').attr('action','/download/'+id);
+      $('#deleteDownloadForm').attr('action','/admin/download/'+id);
   }
   $(document).ready( function () {
     $('#downloadTable').DataTable({
