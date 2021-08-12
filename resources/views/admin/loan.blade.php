@@ -1,4 +1,4 @@
-@extends('layouts.base') 
+@extends('admin.adminlayout')
 @section('title')
 Unique Cooperative | Loan Detail
 @endsection
@@ -159,8 +159,10 @@ Unique Cooperative | Loan Detail
 					</div>
 				</div>
 			</div>
+			<div class="text-right">
+        <a href="{{route('loan-print',$loan->loan_id)}}" target="_blank" class="btn btn-info">Print</a>
+      </div>
 		</div>
-		<input type="submit" value="Apply Loan" class="btn btn-success" />
 	</form>
 </div>
 @endsection 
