@@ -36,7 +36,7 @@ Unique Cooperative | Loan Print
 				<label for="ms">Ms. ( सुश्री )</label>
 			</div>
 			<div class="row mt-2">
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<div class="form-group">
 						<label>Full Name (पुरा नाम)* : </label>
 						<input
@@ -48,7 +48,7 @@ Unique Cooperative | Loan Print
 						<small class="text-muted">in BLOCK letters</small>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<div class="form-group">
 						<label>Father's Name (बाबुको नाम )* :</label>
 						<input
@@ -59,7 +59,7 @@ Unique Cooperative | Loan Print
 						/>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<div class="form-group">
 						<label>Mother's Name (आमाको नाम )* : </label>
 						<input
@@ -73,7 +73,7 @@ Unique Cooperative | Loan Print
 				</div>
 			</div>
 			<div class="row mt-2">
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<div class="form-group">
 						<label>Grandfather's Name (बाजेको नाम)* : </label>
 						<input
@@ -84,7 +84,7 @@ Unique Cooperative | Loan Print
 						/>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<div class="form-group">
 						<label>Husband/Wife's Name (श्रीमान/श्रीमतीको नाम ) </label>
 						<input
@@ -95,7 +95,7 @@ Unique Cooperative | Loan Print
 						/>
 					</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<div class="form-group">
 						<label>Membership Number (सदस्यता नं.) * </label>
 						<input
@@ -112,7 +112,7 @@ Unique Cooperative | Loan Print
 			<h3>२. कर्जाको बिवरण</h3>
 			<hr />
 			<div class="row mt-2">
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<div class="form-group">
 						<label>Loan Amount (ऋण रकम)* : </label>
 						<input
@@ -123,7 +123,7 @@ Unique Cooperative | Loan Print
 						/>
 					</div>
 				</div>
-				<div class="col-md-8">
+				<div class="col-sm-8">
 					<div class="form-group">
 						<label>Loan Amount In words (ऋण रकम अक्षयरमा)* : </label>
 						<input
@@ -136,7 +136,7 @@ Unique Cooperative | Loan Print
 				</div>
 			</div>
 			<div class="row mt-2">
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<div class="form-group">
 							<label>Loan Type (कर्जाको किसिम) : </label>
               <input
@@ -147,7 +147,7 @@ Unique Cooperative | Loan Print
 						/>
 						</div>
 				</div>
-				<div class="col-md-4">
+				<div class="col-sm-4">
 					<div class="form-group">
 						<label>भुक्तानी अवधि *: </label>
 						<input
